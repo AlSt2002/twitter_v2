@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
+* {
+
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+
+}
+
+body {
+
+font-family: "Roboto", sans-serif;
+overflow-x: hidden;
+
+}
+
+.navbar-nav  svg {
+
+height: 26px;
+width: 26px;
+
+}
+
+.navbar-nav span {
+    font-size: 1.35rem;
+}
+
+
+
+.circle .background-profile {
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 60%;
+  }
+
+.whatIsHappening .background-profile {
+
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 60%;
+
+}  
+
+
+  nav .profile {
+
+    background-color: #e7e7e8;
+    background-color: #fff;
+    border-style: none;
+  }
+
+
+  body .main-part {
+    height: 100vh;
+    overflow-y: scroll;
+    
+  }
+
+
+  .main-part::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid-container {
+    height: 3.3125rem;
+    
+  }
+
+  .nav-2-container {
+    backdrop-filter: blur(15px);
+  }
+
+  .nav2-link {
+    font-weight: 500;
+    color: #96a0a8;
+    text-decoration: none;
+  }
+
+  .nav2-link:hover {
+    background-color: #e7e7e8;
+  }
+
+
+  .tweet-text-container textarea {
+    width: 100%;
+    resize: none;
+  }
+
+  .tweet-text-container textarea:focus {
+    border: none;
+    outline: none;
+  }
+
+  .tweet-text-container textarea::placeholder {
+    font-size: 20px;
+  }
+
+  .media-label:hover {
+    cursor: pointer;
+  }
+
+  .photo {
+    color: #1d9bf0;
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .alb{
+    fill: #1d9bf0;
+  
+  }
+
+
+  .aside-wrapper::-webkit-scrollbar{
+    display: none;
+  }
+
+  .cont {
+    height: 3.3125rem;
+    background-color: white;
+    padding-top: 4px;
+    top: 0;
+  }
+
+
+  .search-container {
+    height: 80%;
+    width: 85%;
+    top: .5rem;
+    
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    background-color: #eff3f4;
+    
+  }
+
+  
+
+  .search-container input {
+    width: 80%;
+    height: 80%;
+    text-indent: 15px;
+    position: relative;
+    top: 2px;
+    left: 33px;
+    background-color: #eff3f4;
+    
+  }
+
+  .search-container svg {
+    top: 17px;
+    left: 50px;
+  }
+
+  .search-container input:focus {
+    outline: #1d9bf0;
+  }
+
+  .twitter-border-end {
+    border-color: rgb(239, 243, 244);
+    border-right-width: 1px;
+    border-right-style: solid;
+   
+  }
+
+  .twitter-border-bottom {
+    border-color: rgb(239, 243, 244);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+   
+  }
+
+  .twitter-button {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+
+    background-color: rgb(15, 20, 25);
+    border-color: rgba(0, 0, 0, 0);
+
+  }
+
+  aside .sub-to-premium, aside .trends, aside .who-to-follow {
+    border-color: rgb(239, 243, 244);
+    border-radius: 16px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+    padding-bottom: 12px;
+
+  }
+
+  .sub-to-premium .sub-header {
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 24px;
+    padding-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .sub-to-premium .sub-text {
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    line-height: 20px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .sub-to-premium .sub-link {
+    background-color: rgb(15, 20, 25);
+    border-color: rgba(0, 0, 0, 0);
+    min-height: 36px;
+   
+    outline-style: none;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-right: 16px;
+    
+
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-style: solid;
+
+    margin-left: 0.75rem;
+
+
+
+  }
+
+
+  .sub-to-premium .button-description {
+    color: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    flex-grow: 1;
+
+
+  }
+
+
+  aside .trends , aside .who-to-follow{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+
+  aside .trends-for-you {
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding-bottom: 12px;
+    
+  }
+
+  .trends .topic-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .trends .topic-category {
+    color: rgb(83, 100, 113);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8125rem;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .trends .trend-topic {
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin-top: 2px;
+
+  }
+
+
+  .trends .no-of-posts {
+    color: rgb(83, 100, 113);
+    font-family: "Roboto", sans-serif;
+    margin-top: 4px;
+    font-size: 0.8125rem;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+
+  .who-to-follow .follow-header {
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding-bottom: 12px;
+  }
+
+  .who-to-follow .first-to-follow {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgba(0,0,0,0.00);
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+  }
+
+
+  .who-to-follow .follow-name {
+    color: rgb(15, 20, 25);
+    font-weight: 700;
+  }
+
+  .who-to-follow .follow-username {
+    color: rgb(83, 100, 113);
+    font-weight: 400;
+    
+  }
+
+  .who-to-follow .custom-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    height: 32px;
+  }
+
+  .who-to-follow .follow-profile {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .post .profile-image-container , .image-post .profile-image-container{
+    width: 2.5rem;
+
+  }
+
+  .profile-image-container .profile-image-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+ .user-info .name-text-container {
+  color: rgb(15, 20, 25);
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+ }
+
+ .user-info a .name-text-container:hover {
+    text-decoration: underline;
+ }
+
+
+ .user-info .username-text-container {
+  color: rgb(83, 100, 113);
+  font-family: "Roboto", sans-serif;
+  font-feature-settings: "ss01";
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  
+ }
+
+ .user-info .created-at {
+  color: rgb(83, 100, 113);
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 0.9375rem;
+
+ }
+
+ .post .tweet-text-container, .image-post .tweet-text-container{
+    color: rgb(15, 20, 25);
+    font-family: "Roboto", sans-serif;
+    line-height: 20px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+
+ }
+
+ .post .replyRetweet , .image-post .replyRetweet {
+  color: rgb(83, 100, 113);
+  font-family: "Roboto", sans-serif;
+  line-height: 20px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+
+ }
+
+ .tweets-button-style{
+  fill: rgb(83, 100, 113);
+  width: 1.55em;
+}
+
+.replyButton , .retweetButton, .likeButton {
+  background-color: transparent;
+  border: none;
+}
+
+
+
+ @media  screen and (max-width: 609px) {
+    .post .tweet-content , .image-post .tweet-content {
+      width: 340px;
+    }
+ }
+   
+  @media screen and (min-width: 706px) {
+        body .main-part{
+          width: 37.5rem;
+
+        }    
+
+  }
+
+
+@media screen and (min-width: 992px) {
+
+   
+}
+
+
+
+
+@media screen and (max-width:1022px) {
+    body .aside-wrapper {
+      display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 1023px) {
+ 
+  body .aside-wrapper {
+
+    height: 100vh;
+    overflow-y: scroll;
+    width: 340px;
+   
+    
+  
+    
+  }
+
+
+  
+  .aside-wrapper aside {
+    margin-left: 20px;
+    margin-right: 30px;
+  
+  
+  }
+
+  .sub-to-premium .sub-link {
+    width: 116px;
+  }
+
+}
+
+@media screen and (max-width: 1115px) {
+  .search-container svg {
+    top: 17px;
+    left: 30px;
+  }
+
+  .aside-wrapper .search-container  {
+    margin-left: 20px;
+}
+
+
+  .aside-wrapper aside {
+    margin-left: 20px;
+  }
+
+
+  .aside-wrapper .sub-to-premium {
+    margin-left: 1px;
+  }
+
+  .aside-wrapper .trends {
+    margin-left: 1px;
+  }
+
+  .aside-wrapper .who-to-follow {
+    margin-left: 1px;
+  }
+}
+
+
+@media screen and (min-width: 1115px) {
+    
+  body .aside-wrapper {
+    width: 420px;
+  }
+
+  .aside-wrapper aside{
+    margin-left: 45px;
+    
+  }
+
+  .aside-wrapper .search-container {
+    margin-left: 31px;
+  }
+
+
+ 
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .header .nav-wrapper {
+    padding-left: 2rem;
+  }
+
+  body .aside-wrapper {
+    width: 400px;
+  }
+
+}
+
+@media screen and (max-width: 1299px) {
+  .profile .username {
+    display: none;
+  }
+
+  .profile #more {
+    display: none;
+  }
+
+  .home-span, .explore-span , .notifications-span, .messages-span, .profile-span, .more-span{
+    display: none;
+  }
+
+}
+
+
+@media screen and (min-width: 1300px) {
+    .header {
+      min-width: 19.8125rem;   
+    }
+
+    nav .post-button {
+      height: 3.125rem;
+      border-top-left-radius: 99px;
+      border-top-right-radius: 99px;
+      border-bottom-left-radius: 99px;
+      border-bottom-right-radius: 99px;
+      font-size: medium;
+      font-weight: 900;
+      box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+      border-color: rgba(0, 0, 0, 0);
+      background-color: #1d9bf0;
+      width: 90%;
+  }
+
+  nav .profile {
+     
+      border-top-left-radius: 99px;
+      border-top-right-radius: 99px;
+      border-bottom-left-radius: 99px;
+      border-bottom-right-radius: 99px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 1.5rem !important;
+      
+    }
+
+   nav .profile:hover {
+      background-color: #e7e7e8;
+    }
+
+   .profile .username {
+      line-height: 1.2;
+      display: flex;
+    }
+
+    .profile #more {
+      margin-left: 45px;
+      display: block;
+    }
+
+    .home-span, .explore-span , .notifications-span, .messages-span, .profile-span, .more-span{
+      display: block;
+    }
+
+    .header .nav-wrapper {
+      padding-left: 3rem;
+    }
+
+
+    body .aside-wrapper {
+      width: 380px;
+    }
+
+   
+
+}
+
+@media  screen and (min-width: 1358px) {
+  body .aside-wrapper {
+    width: 440px;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    {% block css %}{%endblock%}
+</head>
+<body class="row">
+    <div class="col-2 col-lg-1 col-xl-2 twitter-border-end header">
+        {% include 'layout/sidenav.html' %}
+    </div>
+   
+        {% block content %}{% endblock %}
+
+     <div class="aside-wrapper ps-0 pe-0">
+        
+        {% include 'layout/aside.html' %}
+     </div>   
+    
+</body>
+</html>

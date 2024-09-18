@@ -1,0 +1,21 @@
+{
+    "name": "albionstublla/twitter-project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Albion Stublla",
+            "email": "stubllaalbion@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "~v3.5.1",
+        "illuminate/database": "^11.18",
+         "joeyrush/better-dd": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\":"App/"
+        }   
+    }
+}

@@ -1,0 +1,5 @@
+vendor
+/vendor
+/.vscode
+/composer.lock
+composer.lock
