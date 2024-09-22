@@ -6,7 +6,7 @@ use App\Helpers\Response;
 use App\Helpers\Session;
 use App\Models\Tweet;
 use Core\Controller;
-
+use Core\View;
 
 class TweetController extends Controller {
 
@@ -17,7 +17,7 @@ class TweetController extends Controller {
 
         if($tweets) {
            foreach ($tweets as $tweet) {
-                $tweet = Tweet::with('user')->findOrFail($tweet->id);
+                $tweet = Tweet::with('user')->with('likes')->findOrFail($tweet->id);
                 $jsontweets[] = $tweet;
            }
         }
@@ -48,11 +48,10 @@ class TweetController extends Controller {
             }
             
             if($tweet->save()) {
-               $tweet = Tweet::with('user')->findOrFail($tweet->id);
+               $tweet = Tweet::with('user')->with('likes')->findOrFail($tweet->id);
                 Response::json($tweet);
             }
 
-        
        }
     }
 

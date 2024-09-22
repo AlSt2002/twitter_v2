@@ -34,7 +34,9 @@ class Router
         $route = preg_replace('/\//', '\\/', $route);
 
         // Convert variables e.g. {controller}
-        $route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z-]+)', $route);
+        //$route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z-]+)', $route);
+        $route = preg_replace('/\{([a-z]+)\}/', '(?P<\1>[a-z0-9-]+)', $route);
+
 
         // Convert variables with custom regular expressions e.g. {id:\d+}
         $route = preg_replace('/\{([a-z]+):([^\}]+)\}/', '(?<P\1>\2)', $route);
@@ -111,12 +113,15 @@ class Router
 
             if (class_exists($controller)) {
                 $controller_object = new $controller($this->params);
-
+                
                 $action = $this->params['action'];
                 $action = $this->convertToCamelCase($action);
 
                 if (preg_match('/action$/i', $action) == 0) {
-                    $controller_object->$action();
+                    $params = array_slice($this->params, 2);
+
+                    //$controller_object->$action();
+                    call_user_func_array([$controller_object, $action], $params);
 
                 } else {
                     throw new \Exception("Method $action in controller $controller cannot be called directly - remove the Action suffix to call this method");
