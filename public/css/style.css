@@ -438,6 +438,22 @@ width: 26px;
 }
 
 
+.repost-panel .repost-sign {
+  width: 25px;
+}
+
+.repost-panel svg {
+  height: 16px;
+  width: 16px;
+  fill: rgba(83,100,113,1.00);
+}
+
+.repost-panel .retweet-name-container {
+  color: rgb(83, 100, 113);
+  font-size: 15px;
+  font-weight: 500;
+}
+
 
  @media  screen and (max-width: 609px) {
     .post .tweet-content , .image-post .tweet-content {

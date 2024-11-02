@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Helpers\Response;
 use App\Helpers\Session;
+use App\Models\Retweet;
 use App\Models\User;
 use Core\Controller;
 use Core\View;
@@ -22,7 +24,14 @@ class HomeController extends Controller {
         
     }
 
+    public function getPosts() {
+        $tweets = TweetController::getTweets();
+        $retweets = RetweetController::getRetweets();
 
+        $array = array_merge($tweets, $retweets);
+
+        Response::json($array);
+    }
    
 
 }

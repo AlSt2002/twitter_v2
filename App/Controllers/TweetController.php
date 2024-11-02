@@ -17,13 +17,27 @@ class TweetController extends Controller {
 
         if($tweets) {
            foreach ($tweets as $tweet) {
-                $tweet = Tweet::with('user')->with('likes')->findOrFail($tweet->id);
+                $tweet = Tweet::with('user')->with('likes')->with('retweets')->findOrFail($tweet->id);
                 $jsontweets[] = $tweet;
            }
         }
 
         Response::json($jsontweets);
 
+    }
+
+
+    public static function getTweets() {
+        $tweets = Tweet::all();
+
+        if($tweets) {
+            foreach ($tweets as $tweet) {
+                 $tweet = Tweet::with('user')->with('likes')->with('retweets')->findOrFail($tweet->id);
+                 $jsontweets[] = $tweet;
+            }
+         }
+
+         return $jsontweets;
     }
 
     public function create()  {
@@ -48,7 +62,7 @@ class TweetController extends Controller {
             }
             
             if($tweet->save()) {
-               $tweet = Tweet::with('user')->with('likes')->findOrFail($tweet->id);
+               $tweet = Tweet::with('user')->with('likes')->with('retweets')->findOrFail($tweet->id);
                 Response::json($tweet);
             }
 
