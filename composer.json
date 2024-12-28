@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "twig/twig": "~v3.5.1",
+        "twig/twig": "3.6",
         "illuminate/database": "^11.18",
          "joeyrush/better-dd": "^1.4"
     },

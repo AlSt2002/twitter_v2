@@ -19,6 +19,7 @@ $router->add('/getId', ['controller' => 'SessionController', 'action' => 'userId
 $router->add('/user-create', ['controller' => 'UserController' , 'action' => 'create']);
 
 
+
 // tweet routes
 $router->add('/add-tweet' ,['controller' => 'TweetController' , 'action' => 'create']);
 $router->add('/get-tweets', ['controller' => 'TweetController', 'action' => 'index']);

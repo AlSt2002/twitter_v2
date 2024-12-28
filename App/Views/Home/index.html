@@ -269,7 +269,8 @@
                         .parentElement.parentElement;
        
         const tweetId = tweet.id;
-        const id = tweetId.split('tweet-').join('');
+
+        const id = (tweetId.includes('retweet')) ? await getTheTweet(tweetId) : tweetId.split('tweet-').join('');
         const num_likes =  parseInt(this.nextSibling.innerHTML);
         
         try {
@@ -326,12 +327,12 @@
       return user_id == tweet_user_id;
     }
 
+    
+
     async function getTheTweet(retweet) {
       const id = retweet.split('retweet-').join('');
       
       const endpoint = `/api/getTweet/${id}`;
-
-     
 
       try {
 

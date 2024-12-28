@@ -48,10 +48,10 @@ class TweetController extends Controller {
             $tweet->user_id = $session->userId;
             $tweet->tweetText = $_POST['tweetText'];
 
-            $fileName = time(). "-" . $_FILES['image']['name'];
+            $fileName = time() . "-" . $_FILES['image']['name'];
             $tempName =  $_FILES['image']['tmp_name'];
             $ext = pathinfo($fileName, PATHINFO_EXTENSION);
-            $allowedtypes = ['jpg', 'jpeg', 'png', 'gif'];
+            $allowedtypes = ['jpg', 'jpeg', 'png', 'gif', 'PNG'];
             
             if(in_array($ext, $allowedtypes)) {
                 if($_FILES['image']['error'] == 0) {
